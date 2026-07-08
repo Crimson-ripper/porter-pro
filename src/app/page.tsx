@@ -63,12 +63,12 @@ export default function LandingPage() {
             <p className="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
               Experience logistics that feel like luxury. From critical corporate parcels to personal care items, we deliver with absolute precision and security.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="flex items-center justify-center gap-2 bg-[#D4AF37] text-[#1E1B4B] px-8 py-4 rounded-full text-lg font-bold transition-all shadow-xl hover:shadow-2xl">
-                Book a Vehicle <ChevronRight className="w-5 h-5" />
+            <div className="flex flex-col sm:flex-row gap-6 mt-8">
+              <button className="flex items-center justify-center gap-3 bg-[#D4AF37] text-[#1E1B4B] px-10 py-5 rounded-full text-xl font-extrabold transition-all shadow-2xl hover:shadow-3xl hover:scale-105">
+                <Smartphone className="w-7 h-7" /> Porter Pro APP
               </button>
-              <button className="flex items-center justify-center gap-2 bg-white border border-[#1E1B4B]/20 text-[#1E1B4B] hover:bg-[#1E1B4B]/5 px-8 py-4 rounded-full text-lg font-semibold transition-colors">
-                Get an Estimate
+              <button className="flex items-center justify-center gap-3 bg-[#1E1B4B] text-white px-10 py-5 rounded-full text-xl font-extrabold transition-all shadow-2xl hover:shadow-3xl hover:scale-105">
+                <Truck className="w-7 h-7" /> Driver APP
               </button>
             </div>
           </motion.div>
