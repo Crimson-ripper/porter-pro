@@ -1,5 +1,31 @@
 # Tech Stack
 
+## Now: Proof of concept (₹0)
+
+Goal: prove that a customer can book, a nearby driver gets the job, and both see the trip live — using only free tools, on a low-spec laptop (no Docker, no Android emulator).
+
+| Need | Free PoC choice |
+|---|---|
+| Mobile apps | Expo + TypeScript, run on your real Android phone with **Expo Go** (no emulator, no builds) |
+| Maps | **MapLibre + OpenStreetMap** tiles; Ola Maps free tier for search/routes |
+| Backend | Node.js + Fastify, running **on your laptop** |
+| Phones reaching the laptop | Same Wi-Fi, or a free **Cloudflare Tunnel** (`cloudflared`) |
+| Database | **Supabase free tier** (cloud Postgres + PostGIS) — nothing to install locally |
+| Nearest driver | PostGIS query in Postgres (no Redis needed at PoC scale) |
+| Realtime | Socket.IO on the same server |
+| Login | Phone number + fixed test OTP (`123456`) — no SMS cost |
+| Photos / KYC files | Supabase Storage free tier |
+| Payments | Cash only, or Razorpay **test mode** |
+| Admin | Next.js page run locally |
+| Testing dispatch | Driver simulator script (fake drivers) |
+| If the laptop is too slow | **GitHub Codespaces** free tier (cloud VS Code, ~60 h/month on 2 cores) |
+
+Everything below is the **later / production** plan — not needed until the PoC works.
+
+---
+
+## Later: Production stack
+
 Chosen for a **two-person team (one developer + Claude), no hires, minimum cost**, while staying able to scale to multiple cities without a rewrite.
 
 ## Guiding rules

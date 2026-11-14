@@ -16,12 +16,12 @@ Feature details for every phase are in [FEATURES.md](FEATURES.md).
 
 - Monorepo with npm workspaces (`apps/*`, `packages/*`)
 - `packages/shared`: types, Zod schemas, order state machine, fare function
-- `apps/api`: Fastify skeleton, Drizzle + Postgres/PostGIS, docker-compose (Postgres + Redis) for local dev
+- `apps/api`: Fastify skeleton, Drizzle + Supabase Postgres/PostGIS (free tier; no Docker for the PoC)
 - Database schema v1: users, drivers, vehicles, vehicle_types, cities, rate_cards, orders, order_stops, order_events, payments, ledger_entries
 - GitHub Actions: lint + typecheck + tests
-- **You:** install Docker Desktop, create Supabase, Ola Maps, MSG91 (test) accounts
+- **You:** create a free Supabase account; install Expo Go on your Android phone
 
-**Done when:** `docker compose up` + `npm run dev` starts the API and it talks to the database.
+**Done when:** `npm run dev` starts the API and it talks to the Supabase database.
 
 ## Phase 1 — Auth & core API (Week 3-5)
 
