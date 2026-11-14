@@ -2,9 +2,14 @@
   "name": "porter-pro",
   "private": true,
   "workspaces": [
-    "apps/landing"
+    "apps/*",
+    "packages/*"
   ],
   "scripts": {
+    "dev:api": "npm run dev -w apps/api",
+    "simulate": "npm run simulate -w apps/api",
+    "dev:customer": "npm run start -w apps/customer-app",
+    "dev:driver": "npm run start -w apps/driver-app",
     "dev:landing": "npm run dev -w apps/landing",
     "build:landing": "npm run build -w apps/landing"
   }

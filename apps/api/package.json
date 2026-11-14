@@ -1,0 +1,30 @@
+{
+    "name": "@porter/api",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "tsx watch src/index.ts",
+        "start": "tsx src/index.ts",
+        "simulate": "tsx scripts/simulate.ts",
+        "typecheck": "tsc --noEmit",
+        "smoke": "tsx scripts/smoke.ts"
+    },
+    "dependencies": {
+        "@electric-sql/pglite": "^0.5.16",
+        "@fastify/cors": "^11.4.3",
+        "@fastify/jwt": "^10.2.7",
+        "@porter/shared": "*",
+        "fastify": "^5.12.8",
+        "pg": "^8.23.1",
+        "socket.io": "^4.8.4",
+        "zod": "^4.6.7"
+    },
+    "devDependencies": {
+        "@types/node": "^20.19.43",
+        "@types/pg": "^8.23.1",
+        "socket.io-client": "^4.8.4",
+        "tsx": "^4.23.15",
+        "typescript": "^5.9.3"
+    }
+}
